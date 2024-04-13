@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpStrength);
         }
 
-        if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
@@ -47,5 +48,11 @@ public class PlayerController : MonoBehaviour
     bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.transform.tag == "Death")
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
     }
 }
