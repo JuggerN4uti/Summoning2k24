@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Scripts")]
+    public Fade Fading;
+
     [Header("Movement")]
     public float horizontal;
     public float speed, jumpStrength;
@@ -35,10 +38,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
             DestroyElemental();
 
-        if (Input.GetKeyUp(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
             Summon = 0;
-        if (Input.GetKeyUp(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
             Summon = 1;
+        if (Input.GetKeyDown(KeyCode.R))
+            Die();
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -74,10 +79,34 @@ public class PlayerController : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.transform.tag == "Death")
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+            Die();
+        if (other.transform.tag == "Doors")
+            Enter();
+    }
+
+    void Die()
+    {
+        Fading.FadeOut();
+        Invoke("Restart", 0.5f);
+    }
+
+    void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+    }
+
+    void Enter()
+    {
+        Fading.FadeOut();
+        Invoke("Proceed", 0.6f);
+    }
+
+    void Proceed()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     // Summoning
