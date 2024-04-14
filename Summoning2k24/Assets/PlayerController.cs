@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     public Fade Fading;
 
     [Header("Movement")]
-    public float horizontal;
-    public float speed, jumpStrength;
+    public Transform PlayerSprite;
+    public float horizontal, speed, jumpStrength;
     public bool facingRight;
 
     [Header("Summon")]
@@ -68,9 +68,9 @@ public class PlayerController : MonoBehaviour
         if (facingRight && horizontal < 0f || !facingRight && horizontal > 0f)
         {
             facingRight = !facingRight;
-            Vector3 localScale = transform.localScale;
+            Vector3 localScale = PlayerSprite.localScale;
             localScale.x *= -1f;
-            transform.localScale = localScale;
+            PlayerSprite.localScale = localScale;
         }
     }
 
