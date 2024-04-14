@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour
             Summon = 0;
         if (Input.GetKeyDown(KeyCode.Alpha2))
             Summon = 1;
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+            Summon = 2;
         if (Input.GetKeyDown(KeyCode.R))
             Die();
 
@@ -81,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform.tag == "Death")
+        if (other.transform.tag == "Death" || other.transform.tag == "Barrier")
             Die();
         if (other.transform.tag == "Doors")
             Enter();
@@ -100,6 +102,8 @@ public class PlayerController : MonoBehaviour
 
     void Enter()
     {
+        if (PlayerPrefs.GetInt("Unlocked") < SceneManager.GetActiveScene().buildIndex + 1)
+            PlayerPrefs.SetInt("Unlocked", SceneManager.GetActiveScene().buildIndex + 1);
         Fading.FadeOut();
         Invoke("Proceed", 0.6f);
     }

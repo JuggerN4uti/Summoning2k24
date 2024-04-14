@@ -98,7 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d705e10e6e5dab4db2ea4d2be1824d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonSprite: {fileID: 7690927499331028919}
   pressed: 0
+  UnpressedButtonSprite: {fileID: 21300000, guid: 65a2f2a6bd4f23c47b76ce9cb393928c, type: 3}
+  PressedButtonSprite: {fileID: 21300000, guid: d432bb05f7c07a140bed5ab8d5f5a004, type: 3}
 --- !u!61 &7690927499331028917
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,5 +126,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.13}
+  m_Size: {x: 0.22, y: 0.11}
   m_EdgeRadius: 0

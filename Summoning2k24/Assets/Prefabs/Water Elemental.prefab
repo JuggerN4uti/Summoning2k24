@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water Elemental
       objectReference: {fileID: 0}
+    - target: {fileID: 2863458277986929326, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+      propertyPath: duration
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2863458277986929326, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+      propertyPath: elementalID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6406602393721792192, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_Color.b
       value: 0.48235294
@@ -30,10 +38,10 @@ PrefabInstance:
     - target: {fileID: 6431454792869279060, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: e5a87057bcaad7d4b8636826da017489, type: 2}
+      objectReference: {fileID: 6200000, guid: 54053b4ee60379a4b8ad17bbde6ac798, type: 2}
     - target: {fileID: 6431454792869279060, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_Constraints
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6431454792869279060, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_GravityScale

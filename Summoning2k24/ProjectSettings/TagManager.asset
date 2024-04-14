@@ -8,6 +8,9 @@ TagManager:
   - Perish
   - Doors
   - Golem
+  - Cloud
+  - Barrier
+  - Wind
   layers:
   - Default
   - TransparentFX

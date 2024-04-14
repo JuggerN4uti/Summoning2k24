@@ -180,7 +180,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 35
+  m_Mass: 70
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   elementalID: 0
-  duration: 10
+  duration: 7.5
   DurationImage: {fileID: 5453895472923754527}
 --- !u!1 &4371315860152915479
 GameObject:
