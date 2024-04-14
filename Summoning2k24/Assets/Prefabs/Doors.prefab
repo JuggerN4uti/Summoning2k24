@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8595656101450246967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.48, y: 3.1999998, z: 0}
-  m_LocalScale: {x: 1.6, y: 2, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5922391c18604b440ba49a724e1a0879, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8721453ad49c3d468d6526693984948, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28125, y: 1.1875}
+    oldSize: {x: 0.43, y: 0.56}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoorSprite: {fileID: 8595656101450246969}
   DoorCollider: {fileID: 8595656101450246966}
-  closed: 1
-  OpenedDoorSprite: {fileID: 21300000, guid: 5922391c18604b440ba49a724e1a0879, type: 3}
-  ClosedDoorSprite: {fileID: 21300000, guid: 99680d07f1ba14f4b86efdd7a1a3a84a, type: 3}
+  Buttons: []
+  viable: 0
+  OpenedDoorSprite: {fileID: 21300000, guid: c8721453ad49c3d468d6526693984948, type: 3}
+  ClosedDoorSprite: {fileID: 21300000, guid: c4d7a14802a0db0438e06d90d8889948, type: 3}
