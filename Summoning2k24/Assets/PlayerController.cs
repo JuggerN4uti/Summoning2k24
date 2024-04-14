@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
 
     bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.25f, groundLayer);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         CursosPosition.position = new Vector2(mousePos[0], mousePos[1]);
 
-        if (SummonsAviable[Summon] > 0)
+        if (SummonsAviable[Summon] > 0 && Vector3.Distance(transform.position, new Vector2(mousePos[0], mousePos[1])) <= 2.6f)
         {
             Instantiate(ElementalPrefabs[Summon], CursosPosition.position, CursosPosition.rotation);
             SummonsAviable[Summon]--;
