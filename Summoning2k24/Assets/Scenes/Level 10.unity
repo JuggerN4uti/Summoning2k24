@@ -981,7 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2188,7 +2188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3025993711414327968, guid: a0da160a2135b5840b229edeb88ec2a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.5312247
+      value: -4.24
       objectReference: {fileID: 0}
     - target: {fileID: 3025993711414327968, guid: a0da160a2135b5840b229edeb88ec2a6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2224,7 +2224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3025993711414327969, guid: a0da160a2135b5840b229edeb88ec2a6, type: 3}
       propertyPath: m_Color.a
-      value: 0.34117648
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3025993711414327974, guid: a0da160a2135b5840b229edeb88ec2a6, type: 3}
       propertyPath: m_Name

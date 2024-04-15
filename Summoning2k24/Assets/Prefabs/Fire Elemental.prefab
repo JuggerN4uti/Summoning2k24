@@ -129,6 +129,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.4
       objectReference: {fileID: 0}
+    - target: {fileID: 2736695729543305978, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2863458277986929326, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: elementalID
       value: 3
@@ -230,12 +234,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8565001761118953593, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -799821806, guid: 5dcd1801a7d7cd74eade613d8d682a3d, type: 3}
+    - target: {fileID: 8565001761118953593, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8565001761118953593, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_Color.g
-      value: 0.25947002
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8565001761118953593, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_Color.r
@@ -243,6 +251,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+--- !u!1 &1241246919287395462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8130934131819133974, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+  m_PrefabInstance: {fileID: 7056906404233341072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4775670158437538093
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241246919287395462}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4bf90c03a7c8e604e91902f2b2e5e3d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1679476763852237170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8548282667574919650, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}

@@ -5,8 +5,15 @@ using UnityEngine;
 public class Music : MonoBehaviour
 {
     [SerializeField] private AudioSource MusicSource;
+    public bool muted;
 
     public static Music instance;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+            Mute();
+    }
 
     void Start()
     {
@@ -24,5 +31,13 @@ public class Music : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void Mute()
+    {
+        muted = !muted;
+        if (muted)
+            MusicSource.volume = 0f;
+        else MusicSource.volume = 0.08f;
     }
 }

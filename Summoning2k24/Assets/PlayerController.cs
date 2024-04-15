@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     [Header("Summon")]
     public Vector3 mousePos;
     public Transform CursosPosition;
+    public GameObject[] SelectedElemental;
+    public TMPro.TextMeshProUGUI[] ElementalCount;
 
     [Header("Elementals")]
     public int Summon;
@@ -43,13 +45,13 @@ public class PlayerController : MonoBehaviour
             DestroyElemental();
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
-            Summon = 0;
+            SelectElemental(0);
         if (Input.GetKeyDown(KeyCode.Alpha2))
-            Summon = 1;
+            SelectElemental(1);
         if (Input.GetKeyDown(KeyCode.Alpha3))
-            Summon = 2;
+            SelectElemental(2);
         if (Input.GetKeyDown(KeyCode.Alpha4))
-            Summon = 3;
+            SelectElemental(3);
         if (Input.GetKeyDown(KeyCode.R))
             Die();
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -63,6 +65,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            ElementalCount[i].text = SummonsAviable[i].ToString("0");
         }
 
         Flip();
@@ -130,6 +137,13 @@ public class PlayerController : MonoBehaviour
     void Proceed()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    void SelectElemental(int which)
+    {
+        SelectedElemental[Summon].SetActive(false);
+        Summon = which;
+        SelectedElemental[Summon].SetActive(true);
     }
 
     // Summoning
