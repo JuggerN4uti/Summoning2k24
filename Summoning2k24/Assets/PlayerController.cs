@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
             Summon = 1;
         if (Input.GetKeyDown(KeyCode.Alpha3))
             Summon = 2;
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+            Summon = 3;
         if (Input.GetKeyDown(KeyCode.R))
             Die();
 

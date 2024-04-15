@@ -2230,7 +2230,7 @@ PrefabInstance:
       objectReference: {fileID: 1165881475}
     - target: {fileID: 2305065331648465871, guid: 31da1dd41bb402a43b6e216a3fcf69c1, type: 3}
       propertyPath: Summon
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2305065331648465871, guid: 31da1dd41bb402a43b6e216a3fcf69c1, type: 3}
       propertyPath: SummonsAviable.Array.data[0]

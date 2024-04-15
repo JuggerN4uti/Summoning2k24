@@ -25,7 +25,7 @@ public class Elemental : MonoBehaviour
             Perish();
     }
 
-    void Perish()
+    public void Perish()
     {
         Player.SummonsAviable[elementalID]++;
         Destroy(gameObject);

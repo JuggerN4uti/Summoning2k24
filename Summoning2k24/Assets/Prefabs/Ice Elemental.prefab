@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2512605947471683472, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_Name
-      value: Water Elemental
+      value: Ice Elemental
       objectReference: {fileID: 0}
     - target: {fileID: 2863458277986929326, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: duration
-      value: 15
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2863458277986929326, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: elementalID
@@ -33,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6431454792869279060, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_Mass
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6431454792869279060, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_Material
@@ -45,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6431454792869279060, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_GravityScale
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8548282667574919650, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
       propertyPath: m_RootOrder
@@ -99,5 +99,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8565001761118953593, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565001761118953593, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7518301
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565001761118953593, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+--- !u!1 &5946261822351088957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2512605947471683472, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+  m_PrefabInstance: {fileID: 8096289418712793773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &764162796442560501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946261822351088957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37fc3075ecc19d4cb5dba2c8e5f74f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elemental: {fileID: 6333961536325896195}
+  fireLayer:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &6333961536325896195 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2863458277986929326, guid: 597d7a5743fe7df4bbbbab114919becb, type: 3}
+  m_PrefabInstance: {fileID: 8096289418712793773}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946261822351088957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a724486f2dac69046b562b9ef66d0ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
