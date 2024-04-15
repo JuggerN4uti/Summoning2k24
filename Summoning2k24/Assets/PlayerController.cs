@@ -29,6 +29,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource SFXSource;
+    public AudioClip[] ElementalSound;
+
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -48,6 +52,8 @@ public class PlayerController : MonoBehaviour
             Summon = 3;
         if (Input.GetKeyDown(KeyCode.R))
             Die();
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Return();
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -97,9 +103,20 @@ public class PlayerController : MonoBehaviour
         Invoke("Restart", 0.5f);
     }
 
+    void Return()
+    {
+        Fading.FadeOut();
+        Invoke("Exit", 0.5f);
+    }
+
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+    }
+
+    void Exit()
+    {
+        SceneManager.LoadScene(0);
     }
 
     void Enter()
@@ -124,6 +141,8 @@ public class PlayerController : MonoBehaviour
         if (SummonsAviable[Summon] > 0 && Vector3.Distance(transform.position, new Vector2(mousePos[0], mousePos[1])) <= 2.6f)
         {
             Instantiate(ElementalPrefabs[Summon], CursosPosition.position, CursosPosition.rotation);
+            SFXSource.clip = ElementalSound[Summon];
+            SFXSource.Play();
             SummonsAviable[Summon]--;
         }
     }
