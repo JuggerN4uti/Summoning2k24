@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public Transform PlayerSprite;
     public float horizontal, speed, jumpStrength;
-    public bool facingRight;
+    public bool facingRight, grounded;
 
     [Header("Summon")]
     public Vector3 mousePos;
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("SerializeFields")]
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
+    [SerializeField] private Transform groundCheck, groundCheck2;
     [SerializeField] private LayerMask groundLayer;
 
     [Header("Audio")]
@@ -93,7 +93,12 @@ public class PlayerController : MonoBehaviour
 
     bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.25f, groundLayer);
+        grounded = false;
+        if (Physics2D.OverlapCircle(groundCheck.position, 0.16f, groundLayer))
+            grounded = true;
+        if (Physics2D.OverlapCircle(groundCheck2.position, 0.16f, groundLayer))
+            grounded = true;
+        return grounded;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

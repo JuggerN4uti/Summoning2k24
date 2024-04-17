@@ -370,7 +370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press M to trun on/off Music
+  m_text: Press M to turn on/off Music
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 443fc34d2f0805e4daf388b5e398b3c1, type: 2}
   m_sharedMaterial: {fileID: -243627342641965384, guid: 443fc34d2f0805e4daf388b5e398b3c1, type: 2}
@@ -768,7 +768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2305065331023671252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: -0.35, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -818,7 +818,7 @@ RectTransform:
   - {fileID: 1784045301284690196}
   - {fileID: 9015822075642331661}
   m_Father: {fileID: 2305065331648465867}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -921,6 +921,7 @@ Transform:
   - {fileID: 3089840610612658113}
   - {fileID: 2212720791736974747}
   - {fileID: 2305065331023671253}
+  - {fileID: 5033233087405253495}
   - {fileID: 2305065331980157310}
   - {fileID: 2305065331847377955}
   - {fileID: 2305065331207400079}
@@ -1018,6 +1019,7 @@ MonoBehaviour:
   speed: 8
   jumpStrength: 14
   facingRight: 1
+  grounded: 0
   mousePos: {x: 0, y: 0, z: 0}
   CursosPosition: {fileID: 2305065331727646115}
   SelectedElemental:
@@ -1040,6 +1042,7 @@ MonoBehaviour:
   Destroyer: {fileID: 6972805798755049441, guid: 3351869f38475d44ca9c178d5d092978, type: 3}
   rb: {fileID: 2305065331648465868}
   groundCheck: {fileID: 2305065331023671253}
+  groundCheck2: {fileID: 5033233087405253495}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -1212,7 +1215,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2305065331648465867}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2305065331847377952
 SpriteRenderer:
@@ -1296,7 +1299,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2305065331648465867}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2305065331980157311
 SpriteRenderer:
@@ -1350,6 +1353,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2429127753771990443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5033233087405253495}
+  m_Layer: 0
+  m_Name: Ground Check 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5033233087405253495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429127753771990443}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.05, y: -0.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2305065331648465867}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2443807287309888408
 GameObject:
   m_ObjectHideFlags: 0
